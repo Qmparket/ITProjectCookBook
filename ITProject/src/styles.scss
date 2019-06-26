@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.css';
+@import '~primeicons/primeicons.css';
+@import '~primeng/resources/themes/nova-light/theme.css';
+@import '~primeng/resources/primeng.min.css';
+@import '~font-awesome/css/font-awesome.css';
+html,
+body {
+	height: 100%;
+}
+body {
+	margin: 0;
+	font-family: Roboto, "Helvetica Neue", sans-serif;
+	padding-top: 7vh;
+	padding-bottom: 7vh;
+	background: lighten(#e4e5e6, 10);
+	// background: -moz-linear-gradient(
+	// 	top,
+	// 	rgba(255, 255, 255, 1) 0%,
+	// 	rgba(255, 255, 255, 1) 0%,
+	// 	rgba(255, 255, 255, 1) 0%,
+	// 	rgba(255, 255, 255, 1) 0%,
+	// 	rgba(246, 232, 250, 1) 100%
+	// );
+	// background: -webkit-gradient(
+	// 	left top,
+	// 	left bottom,
+	// 	color-stop(0%, rgba(255, 255, 255, 1)),
+	// 	color-stop(0%, rgba(255, 255, 255, 1)),
+	// 	color-stop(0%, rgba(255, 255, 255, 1)),
+	// 	color-stop(0%, rgba(255, 255, 255, 1)),
+	// 	color-stop(100%, rgba(246, 232, 250, 1))
+	// );
+	// background: -webkit-linear-gradient(
+	// 	top,
+	// 	rgba(255, 255, 255, 1) 0%,
+	// 	rgba(255, 255, 255, 1) 0%,
+	// 	rgba(255, 255, 255, 1) 0%,
+	// 	rgba(255, 255, 255, 1) 0%,
+	// 	rgba(246, 232, 250, 1) 100%
+	// );
+	// background: -o-linear-gradient(
+	// 	top,
+	// 	rgba(255, 255, 255, 1) 0%,
+	// 	rgba(255, 255, 255, 1) 0%,
+	// 	rgba(255, 255, 255, 1) 0%,
+	// 	rgba(255, 255, 255, 1) 0%,
+	// 	rgba(246, 232, 250, 1) 100%
+	// );
+	// background: -ms-linear-gradient(
+	// 	top,
+	// 	rgba(255, 255, 255, 1) 0%,
+	// 	rgba(255, 255, 255, 1) 0%,
+	// 	rgba(255, 255, 255, 1) 0%,
+	// 	rgba(255, 255, 255, 1) 0%,
+	// 	rgba(246, 232, 250, 1) 100%
+	// );
+	// background: linear-gradient(
+	// 	to bottom,
+	// 	rgba(255, 255, 255, 1) 0%,
+	// 	rgba(255, 255, 255, 1) 0%,
+	// 	rgba(255, 255, 255, 1) 0%,
+	// 	rgba(255, 255, 255, 1) 0%,
+	// 	rgba(246, 232, 250, 1) 100%
+	// );
+	// filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6e8fa', GradientType=0);
+}

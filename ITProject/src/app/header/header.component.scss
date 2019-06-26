@@ -1,0 +1,13 @@
+header {
+	height: 5vh;
+	background: rgb(23, 162, 184);
+	.container {
+		color: white;
+		font-size: 2em;
+		text-align: center;
+		span {
+			font-style: oblique;
+			font-weight: 300;
+		}
+	}
+}

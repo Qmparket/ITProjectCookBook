@@ -1,0 +1,70 @@
+<div class="container">
+  <!-- <p-virtualScroller #virtualScroller [value]="recipes" scrollHeight="80vh" [itemSize]="150" *ngIf="scrollerVisible">
+    <ng-template class="ui-g" pTemplate="item" let-recipe>
+      <div>
+        <div class="ui-g-12 ui-md-6">
+          <div class="ui-g">
+            <div class="ui-g-12 ui-md-12">
+              <h2>{{recipe.title}}</h2>
+            </div>
+          </div>
+          <div class="ui-g">
+            <div class="ui-g-12 ui-mg-12">
+              <p>{{recipe.description}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="ui-g-12 ui-md-4">
+          <img [src]="recipe.image">
+        </div>
+      </div>
+      <div class="ui-g-12 ui-md-2 delete-container">
+        <i class="fa fa-trash" aria-hidden="true" (click)="deleteRecipe(recipe)"></i>
+      </div>
+    </ng-template>
+  </p-virtualScroller> -->
+
+  <div><button class="btn btn-success" (click)="addNewRecipe()">Add New Recipe</button></div>
+  <div *ngFor="let recipe of recipes" class="item">
+    <div (click)="openRecipe(recipe)">
+       <div class="ui-g-12 ui-md-6">
+      <div class="ui-g">
+        <div class="ui-g-12 ui-md-12">
+          <h2>{{recipe.title}}</h2>
+        </div>
+      </div>
+      <div class="ui-g">
+        <div class="ui-g-12 ui-mg-12">
+          <p>{{recipe.description}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="ui-g-12 ui-md-4">
+      <img [src]="recipe.image">
+    </div>
+    </div>
+   <div class="ui-g-12 ui-md-2 delete-container">
+    <i class="fa fa-trash" aria-hidden="true" (click)="deleteRecipe(recipe)"></i>
+  </div>
+  </div>
+
+  <p-dialog header="New Recipe" [(visible)]="addNewRecipeOpen">
+    <span class="ui-float-label title-label">
+      <textarea id="float-input" [(ngModel)]="newRecipeTitle" rows="1" cols="50" pInputTextarea></textarea>
+      <label for="float-input">Title</label>
+    </span>
+    <span class="ui-float-label">
+      <textarea id="float-input" [(ngModel)]="newRecipeDescription" rows="5" cols="50" pInputTextarea></textarea>
+      <label for="float-input">Description</label>
+    </span>
+    <span class="ui-float-label title-label">
+      <textarea id="float-input" [(ngModel)]="newRecipeImage" rows="1" cols="50" pInputTextarea></textarea>
+      <label for="float-input">Image Link</label>
+    </span>
+    <button class="btn btn-success"
+    [disabled]='newRecipeTitle.length === 0 || newRecipeDescription.length === 0 || newRecipeImage.length === 0'
+    (click)="onNewRecipeSave()">Save</button>
+  </p-dialog>
+
+
+</div>

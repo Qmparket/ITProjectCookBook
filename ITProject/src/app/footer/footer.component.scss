@@ -1,0 +1,18 @@
+footer {
+	position: fixed;
+	background: lighten($color: #001e48, $amount: 0);
+	bottom: 0;
+	width: 100vw;
+
+	height: 5vh;
+	text-align: center;
+	div.container {
+		top: 50%;
+		position: absolute;
+		transform: translateY(-50%);
+		width: 100%;
+		span {
+			color: white;
+		}
+	}
+}

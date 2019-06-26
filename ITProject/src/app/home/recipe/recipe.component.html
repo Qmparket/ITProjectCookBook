@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="left-top ui-g-12 ui-md-4">
+    <img [src]='recipe.image'>
+  </div>
+  <div class="right-top ui-g-12 ui-md-8">
+    <div class="ui-g">
+      <h2 class='ui-g-12 ui-md-12'>{{recipe.title}}</h2>
+    </div>
+    <div class="ui-g">
+      <p class='ui-g-12 ui-md-12'>{{recipe.description}}</p>
+    </div>
+  </div>
+  <div class="left-bottom ui-g-12 ui-md-4">
+  </div>
+  <div class="right-bottom ui-g-12 ui-md-8">
+    <button class="btn btn-success new-ingredient-btn" (click)="addNewIngredientOpen = true; isIngredientNew = true;">Add Ingredient</button>
+    <div  *ngIf="recipe.ingredients && recipe.ingredients.length > 0">
+      <div *ngFor="let ingredient of recipe.ingredients; let i = index">
+        <div class="ui-g-12 ui-md-5">
+          {{ingredient.name}}
+        </div>
+        <div class="ui-g-12 ui-md-5">
+          {{ingredient.amount}} {{ingredient.unit}}
+        </div>
+        <div class="ui-g-12 ui-md-1" (click)="editIngredient(ingredient, i)">
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+        </div>
+        <div class="ui-g-12 ui-md-1" (click)="deleteIngredient(ingredient, i)">
+          <i class="fa fa-trash" aria-hidden="true"></i>
+        </div>
+        <!-- <div class="ui-g-12 ui-md-1">
+          <i class="fa fa-plus-circle" aria-hidden="true"></i>
+        </div> -->
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<p-dialog header="New Recipe" [(visible)]="addNewIngredientOpen">
+  <span class="ui-float-label title-label">
+    <textarea id="float-input" [(ngModel)]="newIngredientName" rows="1" cols="50" pInputTextarea></textarea>
+    <label for="float-input">Name</label>
+  </span>
+  <span class="ui-float-label title-label">
+    <textarea id="float-input" [(ngModel)]="newIngredientAmount" rows="1" cols="50" pInputTextarea></textarea>
+    <label for="float-input">Amount</label>
+  </span>
+  <span class="ui-float-label">
+    <p-dropdown [options]="units" [(ngModel)]="newIngredientUnit"></p-dropdown>
+    <label for="float-input">Measuring unit</label>
+  </span>
+  <button class="btn btn-success"
+    [disabled]='newIngredientName.length === 0 || newIngredientAmount.length === 0 || newIngredientUnit.length === 0'
+    (click)="onNewIngredientSave()">Save</button>
+</p-dialog>

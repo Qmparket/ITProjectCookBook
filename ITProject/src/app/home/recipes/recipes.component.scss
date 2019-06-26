@@ -1,0 +1,39 @@
+div.container {
+	min-height: 100vh;
+	border-left: dotted gray 1px;
+	border-right: dotted gray 1px;
+	padding-bottom: 7vh;
+	padding-top: 3vh;
+	button {
+		margin-left: 14px;
+	}
+	img {
+		border-radius: 15px;
+		height: 130px;
+		width: 130px;
+		float: right;
+		object-fit: cover;
+	}
+	h2 {
+		margin: 0;
+		margin-bottom: 20px;
+	}
+	.delete-container {
+		text-align: center;
+		line-height: 150px;
+		padding: 0px;
+		i {
+			font-size: 50px;
+			cursor: pointer;
+		}
+	}
+}
+p-dialog {
+	.ui-float-label {
+		margin: 1.5em 0;
+	}
+	button {
+		float: right;
+		width: 10vw;
+	}
+}

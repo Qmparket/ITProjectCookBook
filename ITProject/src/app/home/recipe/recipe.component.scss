@@ -1,0 +1,48 @@
+div.left-top {
+	position: relative;
+	height: 30vh;
+	text-align: center;
+	img {
+		width: 60%;
+		border-radius: 15px;
+		max-height: 200px;
+		object-fit: cover;
+		transform: translateY(-50%);
+		top: 50%;
+		position: relative;
+	}
+}
+div.right-top {
+	position: relative;
+	height: 30vh;
+	h2 {
+		padding-left: 5px;
+	}
+	p {
+		padding-left: 5px;
+	}
+}
+div.left-bottom {
+	min-height: 40vh;
+}
+div.right-bottom {
+	min-height: 40vh;
+	i {
+		cursor: pointer;
+	}
+	.new-ingredient-btn {
+		margin-bottom: .5em;
+	}
+}
+
+p-dialog {
+	.ui-float-label {
+		margin-top: 1.5rem;
+	}
+	button {
+		margin-top: 1.5em;
+		margin-bottom: 3em;
+		float: right;
+		width: 10vw;
+	}
+}
